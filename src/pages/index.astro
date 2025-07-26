@@ -1,9 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Coming Soon">
-  <section style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; text-align: center;">
-    <h1 style="font-size: 2rem;">📸 Site Under Construction</h1>
-    <p style="margin-top: 1rem;">This aerial photography portfolio is currently being built. Please check back soon.</p>
-  </section>
+
+<BaseLayout title="Matt Anderson Aerial Photography" showHeader={false}>
+  <div class="relative h-screen w-screen bg-cover bg-center" style="background-image: url('/assets/hero-background.jpg');">
+    
+    <!-- Top Bar -->
+    <div class="absolute top-0 left-0 w-full flex justify-between items-center p-6 z-10">
+      <!-- Logo -->
+      <div>
+        <img src="/assets/logo-placeholder.png" alt="Logo" class="h-12 w-auto" />
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="space-x-6 text-white text-lg font-light">
+        <a href="/" class="hover:underline underline">Home</a>
+        <a href="/services" class="hover:underline">Services</a>
+        <a href="https://external-gallery-link.com" class="hover:underline" target="_blank" rel="noopener">Gallery</a>
+        <a href="/about" class="hover:underline">About Us</a>
+      </nav>
+    </div>
+
+    <!-- Centered Tagline and CTA -->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-4">
+      <h1 class="text-5xl md:text-7xl font-light mb-6">Matt Anderson Aerial Photography</h1>
+      <a href="#contact" class="inline-block bg-white text-black px-6 py-3 rounded-full text-lg font-light shadow-lg hover:bg-gray-200 transition">
+        Contact Me
+      </a>
+    </div>
+
+  </div>
 </BaseLayout>
